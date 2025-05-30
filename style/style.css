@@ -1,0 +1,385 @@
+/* Estilos generales */
+html{
+    display: flex;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    background-color: #000000;
+    background-image: url(/img/Wallpaper5.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+/* Encabezado de la pagina */
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000bf;
+    background-image: url(/img/Backgroud-Header2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    
+}
+.header-logo{
+    max-width: 300px;
+    align-items: center;
+    cursor: pointer;
+    transition: filter .8s;
+}
+.header-logo:hover{
+    filter: drop-shadow(5px 5px 5px #808080);
+}
+.header-nav{
+    display: flex;
+    position: relative;
+    margin-right: 5px;
+    border-radius: 20px;
+    padding: 5px;
+    justify-content: center;
+    height: min-content;
+}
+.header-nav-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    right: 50px;
+    margin-right: 5px;
+}
+.header-nav-list > li > a{
+    color: white;
+    transition: filter .3s;
+}
+.header-nav-list > li > a:hover{
+    transform: rotate(6deg);
+    filter: drop-shadow(0 0 5px #dfdfe5);
+}
+.header-nav-list > li{
+    transition: transform .5s;
+}
+.header-nav-list > li:hover{
+    transform: rotate(16deg);
+    transform: translateY(5);
+}
+.header-nav-link, .nav-var-link{
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffffe6;
+    transition: all .8s;
+}
+.header-nav-link:hover, .nav-var-link:hover{
+    text-shadow: 5px 5px 5px #ffe;
+    border-radius: 3px;
+}/* Barra de navegación */
+.nav-var{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(50, 48, 48, 0.378);
+}
+.nav-var-list{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+/* Play Music */
+#play-music{
+    max-width: 200px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+#play-music:hover{
+    opacity: .53;
+}
+/* Sobre la banda */
+.about-band-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-band-description{
+    text-align: left;
+    max-width: 500px;
+}
+.about-band-image{
+    max-width: 200px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: rotate 2s;
+}
+.about-band-image:hover{
+    rotate: 360deg;
+}
+.about-band-botom{
+    display: flex;
+    gap: 20px;
+}
+.about-band-button{
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00000000;
+    color: #FFF;
+    font-weight: bolder;
+}
+.about-band-botom{
+    margin-top: 5px;
+}
+.youtube-button{
+    box-shadow: 0px 0px 15px #ff6600;
+    text-shadow: 0px 0px 10px #ff6600;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, text-shadow 0.3s ease; /* Añade una transición suave para el estado normal */
+}
+.youtube-button:hover{
+    animation-name: youtube;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes youtube {
+    from{
+        box-shadow: 0px 0px 15px #ff6600;
+        text-shadow: 0px 0px 10px #ff6600;
+    }
+    to{
+        box-shadow: 0px 0px 30px #ff8c00; /* Ejemplo: Intensifica el box-shadow y cambia ligeramente el color */
+    }
+}
+.official-web-button {
+    box-shadow: 0px 0px 15px #423e3b;
+    text-shadow: 0px 0px 10px #97928f;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
+}
+.official-web-button:hover {
+    animation-name: official-web-hover;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes official-web-hover {
+    from {
+        box-shadow: 0px 0px 15px #423e3b;
+        text-shadow: 0px 0px 10px #97928f;
+    }
+    to {
+        box-shadow: 0px 0px 30px #635a55; /* Adaptando el color del glow */
+        text-shadow: 0px 0px 20px #b8b1ac; /* Adaptando el color del glow */
+    }
+}
+.spotify-button {
+    box-shadow: 0px 0px 15px #1ea90c;
+    text-shadow: 0px 0px 10px #1ea90c;
+    animation-direction: alternate;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
+}
+.spotify-button:hover {
+    animation-name: spotify-hover;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes spotify-hover {
+    from {
+        box-shadow: 0px 0px 15px #1ea90c;
+        text-shadow: 0px 0px 10px #1ea90c;
+    }
+    to {
+        box-shadow: 0px 0px 30px #24d60e; /* Adaptando el color del glow */
+        text-shadow: 0px 0px 20px #24d60e; /* Adaptando el color del glow */
+    }
+}
+/* Reseña */
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reviw-title {
+    padding: 0;
+    margin-bottom: 0;
+}
+.review > p {
+    text-align: left;
+    max-width: 500px;
+}
+/* Integrantes */
+.integrants{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.integrants-title{
+    width: 100%;
+}
+.intregrants-item{
+    max-width: 400px;
+}
+.integrants-item-top-img{
+    border-radius: 100%;
+    max-width: 200px;
+    transition: transform .5s;
+}
+.integrants-item-top-img:hover{
+    transform: scale(.9);
+}
+/* Canciones */
+.discography{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.discography-title{
+    width: 100%;
+}
+.discography-item{
+    width: 300px;
+    display: flex;
+    background-color: #000000c2;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 10px;
+}
+h3,h4{
+    margin: 0;
+}
+.dicography-item-left-album, .dicography-item-left-release{
+    font-family: cursive;
+    color: gray;
+    font-size: small;
+}
+.discography-item-rigth-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    max-width: 70px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+.discography-item-rigth-img:hover{
+    opacity: .27;
+    animation-name: rotate-img;
+    animation-duration: 2s; /* Agrega la duración de la animación (ajusta el valor según tu preferencia) */
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear; /* Opcional: para una rotación constante */
+}
+
+@keyframes rotate-img {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+/* Galeria */
+.gallery-container {
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+.carousel {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 1rem;
+}
+
+.carousel-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+/* Footer */
+footer{
+    width: 100%;
+    background-color: #0000007e;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer > ul{
+    list-style: none;
+    padding: 5px;
+    display: inline-flex;
+    gap: 20px;
+    border: solid rgb(238, 226, 226) 3px;
+    border-radius: 5px;
+}
+
+footer > ul > li > a{
+    color: white;
+    transition: color .5s;
+    
+}
+
+footer > ul > li > a:hover{
+    color: red;
+}
+
+@media (max-width: 480px) {
+    body {
+        text-align: center;
+    }
+}
